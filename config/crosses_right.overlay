@@ -1,3 +1,5 @@
+#include <dt-bindings/zmk/input_transform.h>
+
 &spi1 {
   cs-gpios = <&gpio1 0 GPIO_ACTIVE_LOW>;
 
