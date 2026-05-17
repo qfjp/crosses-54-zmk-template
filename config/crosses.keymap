@@ -18,38 +18,15 @@
                                             &kp BSPC &kp LGUI &kp EQUAL    &kp RET &kp RGUI &kp SPACE
             >;
         };
-        //arrow_layer {
-        //    display-name = "Bluetooth";
-        //    bindings = <
-        //        &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7  &kp N8     &kp N9   &kp N0    &kp GRAVE
-        //        &trans &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-        //        &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-        //        &trans &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-        //                                    &lt 3 LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-
-        //    >;
-        //};
-
-        //blank_layer {
-        //    display-name = "Blank";
-        //    bindings = <
-        //        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
-        //        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
-        //        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
-        //        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
-        //                             &trans &trans &trans    &trans &trans &trans
-
-        //    >;
-        //};
 
         arrow_layer {
             display-name = "Arrows";
             bindings = <
-                &trans &trans   &trans   &trans    &trans &trans    &trans   &trans    &trans    &trans    &trans &trans
-                &trans &trans   &kp UP   &trans    &trans &trans    &kp HOME &kp PG_DN &kp PG_UP &kp END   &trans &trans
-                &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans    &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans &trans
-                &trans &trans   &trans   &trans    &trans &trans    &trans   &trans    &trans    &trans    &trans &trans
-                                         &kp DEL   &trans &trans    &trans   &trans    &trans
+                &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans   &trans    &trans    &trans    &trans &trans
+                &trans &trans       &kp UP       &trans       &trans       &trans       &kp HOME &kp PG_DN &kp PG_UP &kp END   &trans &trans
+                &trans &kp LEFT     &kp DOWN     &kp RIGHT    &trans       &trans       &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans &trans
+                &trans &trans       &trans       &trans       &trans       &trans       &trans   &trans    &trans    &trans    &trans &trans
+                                                 &kp DEL      &trans       &trans       &trans   &trans    &trans
 
             >;
         };
