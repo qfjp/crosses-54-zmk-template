@@ -8,7 +8,7 @@
 
     behaviors {
         td_lb: tap_dance_lb {
-            compatible: "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-tap-dance";
             tapping-term-ms = <100>;
             bindings = <&kp O>, <&kp LBKT>;
         };
