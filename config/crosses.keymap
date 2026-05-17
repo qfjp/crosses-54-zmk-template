@@ -9,11 +9,13 @@
     behaviors {
         td_lb: tap_dance_lb {
             compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
             tapping-term-ms = <100>;
             bindings = <&kp O>, <&kp LBKT>;
         };
         td_rb: tap_dance_rb {
             compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
             tapping-term-ms = <100>;
             bindings = <&kp P>, <&kp RBKT>;
         };
