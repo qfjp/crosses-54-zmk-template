@@ -10,13 +10,13 @@
         td_lb: tap_dance_lb {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp O>, <&kp LBKT>;
         };
         td_rb: tap_dance_rb {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp P>, <&kp RBKT>;
         };
     };
@@ -26,23 +26,11 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-                &lt 2 TILDE   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5       &kp N6  &kp N7   &kp N8    &kp N9  &kp N0   &lt 3 MINUS
-                &lt 3 TAB     &kp Q  &kp W  &kp E    &kp R    &kp T        &kp Y   &kp U    &kp I     &td_lb  &td_rb   &lt 1 BSLH
+                &lt 1 TILDE   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5       &kp N6  &kp N7   &kp N8    &kp N9  &kp N0   &lt 1 MINUS
+                &lt 2 TAB     &kp Q  &kp W  &kp E    &kp R    &kp T        &kp Y   &kp U    &kp I     &td_lb  &td_rb   &lt 2 BSLH
                 &mt LCTRL ESC &kp A  &kp S  &kp D    &kp F    &kp G        &kp H   &kp J    &kp K     &kp L   &kp SEMI &kp SQT
                 &kp LSHFT     &kp Z  &kp X  &kp C    &kp V    &kp B        &kp N   &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                                             &kp BSPC &kp LGUI &kp EQUAL    &kp RET &kp RGUI &kp SPACE
-            >;
-        };
-
-        arrow_layer {
-            display-name = "Arrows";
-            bindings = <
-                &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans   &trans    &trans    &trans    &trans &trans
-                &trans &trans       &kp UP       &trans       &trans       &trans       &kp HOME &kp PG_DN &kp PG_UP &kp END   &trans &trans
-                &trans &kp LEFT     &kp DOWN     &kp RIGHT    &trans       &trans       &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans &trans
-                &trans &trans       &trans       &trans       &trans       &trans       &trans   &trans    &trans    &trans    &trans &trans
-                                                 &kp DEL      &trans       &trans       &trans   &trans    &trans
-
             >;
         };
 
@@ -51,21 +39,21 @@
             bindings = <
                 &trans &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
                 &trans &kp F6  &kp F7  &kp F8  &kp F9  &kp F10   &trans &trans &trans &trans &trans  &kp F12
-                &trans &kp F11 &kp F12 &kp F13 &kp F14 &kp F15   &kp F3 &trans &trans &trans &trans  &trans
+                &trans &kp F11 &kp F12 &kp F13 &kp F14 &kp F15   &trans &trans &trans &trans &trans  &trans
                 &trans &trans  &trans  &trans  &trans  &trans    &trans &trans &trans &trans &trans  &trans
                                        &kp DEL &trans  &trans    &trans &trans &trans
 
             >;
         };
 
-        mouse_layer {
-            display-name = "Mouse";
+        move_layer {
+            display-name = "Movement";
             bindings = <
-                &trans         &trans     &trans     &trans     &trans     &trans     &trans       &trans     &trans       &trans       &trans       &studio_unlock
-                &trans         &trans     &trans     &trans     &trans     &trans     &trans       &trans     &trans       &trans       &trans       &trans
-                &trans         &trans     &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans     &trans       &trans     &trans       &trans       &trans       &trans
-                &trans         &trans     &trans     &trans     &trans     &trans     &trans       &trans     &trans       &trans       &trans       &trans
-                                                     &trans     &trans     &trans     &mkp MB1     &mkp MB3   &mkp MB2
+                &studio_unlock &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans       &trans     &trans       &trans       &trans       &studio_unlock
+                &trans         &trans       &kp UP       &trans       &trans       &trans       &kp HOME     &kp PG_DN  &kp PG_DN    &kp END      &trans       &trans
+                &trans         &kp LEFT     &kp DOWN     &kp RIGHT    &trans       &trans       &kp LEFT     &kp DOWN   &kp UP       &kp RIGHT    &trans       &trans
+                &trans         &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans       &trans       &trans       &trans
+                                                         &mkp MB2     &mkp MB3     &mkp MB1     &mkp MB1     &mkp MB3   &mkp MB2
             >;
         };
     };
