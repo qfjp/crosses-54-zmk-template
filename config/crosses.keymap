@@ -13,7 +13,7 @@
             bindings = <&kp O>, <&kp LBKT>;
         };
         td_rb: tap_dance_rb {
-            compatible: "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-tap-dance";
             tapping-term-ms = <100>;
             bindings = <&kp P>, <&kp RBKT>;
         };
