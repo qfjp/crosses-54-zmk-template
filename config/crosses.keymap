@@ -6,13 +6,26 @@
 / {
     chosen { zmk,physical-layout = &gggw_crosses_54_layout; };
 
+    behaviors {
+        td_lb: tap_dance_lb {
+            compatible: "zmk,behavior-tap-dance";
+            tapping-term-ms = <100>;
+            bindings = <&kp O>, <&kp LBKT>;
+        };
+        td_rb: tap_dance_rb {
+            compatible: "zmk,behavior-tap-dance";
+            tapping-term-ms = <100>;
+            bindings = <&kp P>, <&kp RBKT>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {
             display-name = "QWERTY";
             bindings = <
                 &lt 2 TILDE   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5       &kp N6  &kp N7   &kp N8    &kp N9  &kp N0   &lt 3 MINUS
-                &lt 3 TAB     &kp Q  &kp W  &kp E    &kp R    &kp T        &kp Y   &kp U    &kp I     &kp O   &kp P    &lt 1 BSLH
+                &lt 3 TAB     &kp Q  &kp W  &kp E    &kp R    &kp T        &kp Y   &kp U    &kp I     &td_lb  &td_rb   &lt 1 BSLH
                 &mt LCTRL ESC &kp A  &kp S  &kp D    &kp F    &kp G        &kp H   &kp J    &kp K     &kp L   &kp SEMI &kp SQT
                 &kp LSHFT     &kp Z  &kp X  &kp C    &kp V    &kp B        &kp N   &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                                             &kp BSPC &kp LGUI &kp EQUAL    &kp RET &kp RGUI &kp SPACE
